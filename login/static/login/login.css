@@ -1,0 +1,25 @@
+/* Custom styles */
+body {
+    background-color: #f8f9fa; /* Light gray background color */
+}
+
+.container {
+    margin-top: 100px; /* Adjust margin as needed */
+}
+
+.login-box {
+    background-color: #fff; /* White background color */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px;
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+

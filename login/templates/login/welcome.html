@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'login/welcome.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h2>Welcome</h2>
+            {% if user.is_authenticated %}
+                <p>Welcome, {{ user.username }}!</p>
+                <form id="logoutForm" method="POST" action="{% url 'user_logout' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger logout-btn">Logout</button>
+                </form>
+            {% else %}
+                <p>Please login or register to access the full site.</p>
+                <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+                <a href="{% url 'register_user' %}" class="btn btn-success">Register</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+

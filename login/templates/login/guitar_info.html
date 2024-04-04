@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Information</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'login/guitar.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="info-box">
+            <h2 class="info-title">Guitar Information</h2>
+            <!-- Dummy content for guitar information -->
+            <div class="dummy-article">
+                <h4>Guitar Model</h4>
+                <p id='textc'>GIBSON E-55</p>
+            </div>
+            <div class="dummy-article">
+                <h4>Guitar Specifications</h4>
+                <ul>
+                    <li>Body Material: Mahogany</li>
+                    <li>Neck Material: Maple</li>
+                    <li>Fretboard Material: Rosewood</li>
+                    <li>Number of Frets: 22</li>
+                </ul>
+            </div>
+            <!-- Logout button -->
+            <form id="logoutForm" method="POST" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger logout-btn">Logout</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+

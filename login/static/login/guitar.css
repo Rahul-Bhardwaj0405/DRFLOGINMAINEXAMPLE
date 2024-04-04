@@ -1,0 +1,36 @@
+
+
+/* Custom styles */
+body {
+    background-color: #f8f9fa; /* Light gray background color */
+}
+
+.container {
+    margin-top: 50px; /* Adjust margin as needed */
+}
+
+.info-box {
+    background-color: #fff; /* White background color */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.info-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Dummy articles */
+.dummy-article {
+    margin-bottom: 20px;
+}
+
+.logout-btn {
+    margin-top: 20px;
+}
+
+#textc {
+    color: #4CAF50;
+}
